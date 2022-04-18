@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="land.php" method="POST">
+        <table>
+            <caption>登陆</caption>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="登陆"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    var form = document.querySelector('form');
+    var username = document.querySelector('[name="username"]');
+    var password = document.querySelector('[name="password"]');
+    var btn1 = document.querySelector('[type="submit"]');
+    form.onsubmit = function(){
+        var reg = /^\w{4,12}$/;
+        if(!reg.test(username.value.trim())){
+            alert('请正确输入用户名');
+            return false;
+        }
+        var reg = /^\d{6,16}$/;
+        if(!reg.test(password.value.trim())){
+            alert('请正确输入密码');
+            return false;
+        }
+    }
+</script>
+</html>
+<script type="text/javascript" src="2.php"></script>

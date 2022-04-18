@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+    Author: Minyoung
+    CreateAt: 2021年10月14日23:44:45
+    License: MIT
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing...</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    console.log(`%c 
+    Author: Minyoung
+    CreateAt: 2021年10月14日23:44:45
+    License: MIT
+    `, 'color:#6266f5;font-weight:bold')
+    function check(){
+    var name=document.getElementById("name").value;
+    var pass=document.getElementById("pass").value;
+    if(name=="artfainy" && pass=="qwer123456" || name=="韵" && pass=="ZHX1314520" || name=="泉州吴彦祖" && pass=="CZHSWEZ" || name=="晚安姐姐" && pass=="CZHQYHWJH" || name=="倾" && pass=="ZHXSWEZ"){
+    alert("登入成功");
+    alert("你好呀！现在由我为"+name+"哥哥服务")
+    window.document.f.action="../index.html";
+    window.document.f.submit();
+    }
+    if(name!="artfainy" && pass=="qwer123456" || name!="韵" && pass=="ZHX1314520" || name!="泉州吴彦祖" && pass=="CZHSWEZ" || name!="晚安姐姐" && pass=="CZHQYHWJH" || name!="倾" && pass=="ZHXSWEZ"){
+      alert("你光猜对秘密有什么用，本小仙不是吃白米饭的")
+    }
+    if(name=="artfainy" && pass!="qwer123456" || name=="韵" && pass!="ZHX1314520" || name=="泉州吴彦祖" && pass!="CZHSWEZ" || name=="晚安姐姐" && pass!="CZHQYHWJH" || name=="倾" && pass!="ZHXSWEZ"){
+      alert(name+"朋友"+"密码是什么快告诉我")
+    }
+    if(name=="" && pass=="" || name=="" && pass=="" || name=="" && pass=="" || name=="" && pass=="" || name=="" && pass==""){
+      alert("hey,你这什么都没有叫我怎么认识你这个帅气的"+name+"哥哥")
+    }
+    if(name=="" && pass=="qwer123456" || name=="" && pass=="ZHX1314520" || name=="" && pass=="CZHSWEZ" || name=="" && pass=="CZHQYHWJH" || name=="" && pass=="ZHXSWEZ"){
+      alert("hey,不能只填写密码哦，"+name+"哥哥")
+    }
+    if(name=="artfainy" && pass=="" || name=="韵" && pass=="" || name=="泉州吴彦祖" && pass=="" || name=="晚安姐姐" && pass=="" || name=="倾" && pass==""){
+      alert("hey，"+name+",不能只让我知道你的名字啊，"+name+"哥哥")
+    }
+    if(name=="晚安姐姐" && pass=="CZHQYHWJH"){
+      alert("hey,帅气的"+name+"哥哥，别再叫"+name)
+      alert("告诉你一个秘密邱一桓好帅呀，连我这个AI都喜欢他")
+    }
+
+    }
+    function check2(){
+    var newname=document.getElementById("newname").value;
+    var newpass=document.getElementById("newpass").value;
+    if(newname=="artfainy" && newpass=="qwer123456" || newname=="韵" && newpass=="ZHX1314520" || newname=="泉州吴彦祖" && newpass=="CZHSWEZ" || newname=="晚安姐姐" && newpass=="CZHQYHWJH" || newname=="倾" && newpass=="ZHXSWEZ"){
+    alert("hey,"+newname+"已经被别人选了呢，"+"换一个吧");
+    }
+    if(newname=="" && newpass=="" ){
+      alert("hey,你这什么都没有叫我怎么认识你这个帅气的"+newname+"哥哥")
+    }
+
+    window.document.f.action="../index.html";
+    window.document.f.submit();
+  }
+  </script>
+</head>
+<body>
+  <div class="container" id="bigBox">
+    <div class="form-warp">
+      <form class="sign-in-form" name="f" action="../index.html">
+        <h2 class="form-title">登录</h2>
+        <input placeholder="用户名" id="name" />
+        <input type="password" placeholder="密码" id="pass" />
+        <div class="submit-btn" onclick="check()">立即登录</div>
+      </form>
+      <form class="sign-up-form" name="f2">
+        <h2 class="form-title">注册</h2>
+        <input placeholder="用户名" id="newname" />
+        <input type="password" placeholder="密码" id="newpass" />
+        <div class="submit-btn" onclick="check2()">立即注册</div>
+      </form>
+    </div>
+    <div class="desc-warp">
+      <div class="desc-warp-item sign-up-desc">
+        <div class="content">
+          <button id="sign-up-btn">注册</button>
+        </div>
+        <img src="./img/log.svg" alt="">
+      </div>
+      <div class="desc-warp-item sign-in-desc">
+        <div class="content">
+          <button id="sign-in-btn">登录</button>
+        </div>
+        <img src="./img/register.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
